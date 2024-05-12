@@ -31,6 +31,7 @@ body{
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
+  font-size: 20px;
 }
 .container{
   display: flex;
@@ -78,16 +79,12 @@ body{
   font-size: 30px;
  } 
 
-
-.article1 .part2 p{
-  color: hsl(233, 8%, 79%);
-  font-size: 20px;
-}
-
-.article1 .part2 h3{
-  color: hsl(233, 8%, 79%);
-  font-size: 30px;
-}
+ .article1 .part2 p,
+ .article1 .part2 h3 {
+   color: hsl(233, 8%, 79%);
+   font-size: 20px;
+ }
+ 
 
 .future-section .section1{
   color: hsl(240, 100%, 5%);
@@ -141,13 +138,14 @@ body{
 
 }
 
-.lower-section .card1 .card2 .card3{
+.lower-section .card1,
+.lower-section .card2,
+.lower-section .card3 {
   display: flex;
   padding: 1rem;
   width: 33%;
   height: fit-content;
 }
-
 .article {
   display: flex;
   flex-direction: column;
@@ -158,16 +156,24 @@ body{
   margin-bottom: 20px;
 }
 
-/* .card-image{
-  width: 25%;
-  height: 50%;
-  object-fit: cover;
+.card-image img {
+  max-width: 100%;
+  height: auto;
 }
 
-.card-image img {
-  width: 100%;
-  height: 100%;
-} */
+.card-title h1 {
+  font-size: 30px;
+}
+
+.card-body h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 
 .lower-section .article p {
   color: hsl(240, 1%, 45%);
@@ -175,97 +181,101 @@ body{
 }
 .lower-section .article h1 {
   color: hsl(235, 15%, 83%);
-  font-family: 15px;
+  font-size: 15px;
 }
 
 .lower-section .article h2 {
-  font-family: 20px;
+  font-size: 20px;
 }
   
-@media (max-width: 375px) {
+/* Mobile View */
+@media screen and (max-width: 375px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
   .nav {
-     display: none;
-      position: absolute;
-      left: 0;
-      padding: 10px 0;
-  }
-  .toggle {
-       display:block;
-       cursor: pointer;
-  }
-  
-  .logo {
-    width: 30px;
-  }
-  .logo img {
+    display: none;
     width: 100%;
   }
-  
-  .nav ul {
-      display: block;
-      flex-direction: column;
+
+  .nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
   }
-  .nav li {
-      margin-right: 0;
-      margin-bottom: 10px;
-  }    
-  .article1 {
-      flex-direction: column;
-          gap: 0;
+
+  .nav a {
+    margin: 5px 0;
+    font-size: 18px;
   }
+
+  .toggle {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
   .article1 .part1 img {
-      flex-direction: column;
-      width: 90%;
-      position: absolute;
-      }    
-  
-  .right .part1 {
-      display: flex;
-      flex-direction: column;
-  } 
-  .future-section  {
-      flex-direction: column;
+    width: 100%;
   }
-  .lower-section{
-      padding: 10px 0;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      height: fit-content;
-      margin: 10px;
-              }  
-  .card-image {
-    width: 25%;
-    height: 100%;
-    object-fit: cover;
+
+  .article1 .part1 {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .article1 .part2 {
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .future-section .section1 h1 {
+    font-size: 40px;
+  }
+
+  .future-section .section2 button {
+    width: 100%;
+  }
+
+  .lower-section .card1,
+  .lower-section .card2,
+  .lower-section .card3 {
+    width: 100%;
+    margin: 10px 0;
   }
 
   .article {
-    width: 75%;
-    margin: 0 0.5rem;
-  } 
-  .lower-section .card-image img {
-      width: 120px;
-      height: 150px;
-  }
-  .lower-section .article h1{
-      font-size: 20px;                    
-  }
-  .lower-section .article h3 {
-      font-size: 15px;
-  }
-  .lower-section .article p {
-      font-size: 12px;
-  }
-  .lower-section .card1 .card2 .card3 {
-      flex-direction: column;
-  }
-  .future-section .section2 button {
-      background-color: hsl(5, 85%, 63%);
-      color: white;
-      padding: 10px 20px;
-      text-transform: uppercase;
-      width: 60%;
+    width: 100%;
+    margin: 0;
   }
 
+  .card-title h1 {
+    font-size: 24px;
+  }
+
+  .card-body h2 {
+    font-size: 18px;
+  }
+
+  .card-body p {
+    font-size: 12px;
+  }
+
+  .lower-section .article p {
+    font-size: 12px;
+  }
+
+  .lower-section .article h1,
+  .lower-section .article h2 {
+    font-size: 18px;
+  }
 }
