@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flex.css">
   
   <title>Flex CSS</title>
   <style>
@@ -21,7 +21,6 @@
           <img src="./assets/images/logo.svg" alt="" />
         </div>
         <div class="nav">
-          <nav>
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">New</a></li>
@@ -29,9 +28,8 @@
               <li><a href="#">Trending</a></li>
               <li><a href="#">Categories</a></li>
             </ul>
-          </nav>
+            <button class="toggle" id="navbar-toggle">☰</button>
         </div>
-        <button class="toggle" id="navbar-toggle">☰</button>
       </div>
 
       <div class="article1">
@@ -54,11 +52,11 @@
         </div>
 
         <div class="part2">
-          <div class="card">
-            <div class="card-title">
-              <h1>New</h1>
-            </div>
-            <div class="card-body">
+          <div class="card1">
+            <div class="card1-body">
+              <div class="card-title">
+                <h1>New</h1>
+              </div>
               <h3>Hydrogen VS Electric Cars</h3>
               <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
               <hr />
